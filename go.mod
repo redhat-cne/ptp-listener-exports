@@ -1,4 +1,4 @@
-module github.com/test-network-function/ptp-listener-exports
+module github.com/redhat-cne/ptp-listener-exports
 
 go 1.19
 
