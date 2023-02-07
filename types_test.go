@@ -10,8 +10,8 @@ func TestStoredEvent_ToCsv(t *testing.T) {
 	}{
 		{
 			name:    "test1",
-			event:   StoredEvent{EventTimeStamp: "timestamp", EventName: "event1", EventType: "eventtype", EventSource: "eventsource", EventValuesFull: "eventfull", EventValuesShort: "eventshort"},
-			wantOut: "timestamp,event1,eventtype,eventsource,eventfull,eventshort",
+			event:   StoredEvent{EventTimeStamp: "timestamp", EventType: "eventtype", EventSource: "eventsource", EventValues: StoredEvent{"value1": "1", "Value2": "34"}},
+			wantOut: "timestamp,eventtype,eventsource,value1,1,Value2,34",
 		},
 	}
 	for _, tt := range tests {
